@@ -1,0 +1,11 @@
+1)
+a) Replacing the processor of a computer with a faster version increases the throughput and decreases response time. The new processor can read instructions faster, meaning that within some time frame, it will have processed more information than its slower counterpart. Since instructions are being executed at a higher speed there should be a slight improvement in response time regardless of the memory-fetch bottleneck: While fetching from memory will still take a considerable amount of time, the instruction to go and fetch something from memory will have executed sooner with a faster processor.
+
+b) Adding additional processors to a system that uses multiple processors for separate tasks will increase throughput. Uni-processor systems simulate concurrency by constantly switching from one process to another. Adding additional processors allows the machine to truly execute tasks concurrently by having each processor handle a task or part of a task (if it is parallel). There are usually always more processes to execute than cores, so adding more should increase the amount of information being processed at once even if the computer already had multiple cores to begin with.
+
+The effect on response time could go either way. On one hand, adding more processors could further decrease the need for the system's processors to switch between tasks and parallel tasks can be executed quickly utilizing multiple processors. This increases the rate of instruction execution, hence improving response time. On the other hand, having multiple processors creates some overhead. If a given task is not parallel or requires a lot of data exchange between multiple processors, the overhead incurred by moving this data could negate any potential gains in execution speed. In some cases, the overhead might increase response time.  
+
+2)
+a) Performance via pipelining is achieved by dividing a certain instruction into multiple parts that can be handled by different sections of the CPU and then having these smaller parts be executed in tandem. This is very similar to assembly lines in manufacturing where each person completes a specific sub-task which is part of completing some larger task, such as building a car.
+b)
+
