@@ -1,0 +1,22 @@
+movl $0, %eax // r = 0
+movl $0, %edx // i = 0
+compl $0, %edi // a == 0?
+jz end 		   // return if a == 0 
+compl $0, %esi // b == 0?
+jz end         // return if b == 0
+compl %esi, %edi
+jle case1      // case1 if b <= a
+
+.case2
+	addl %esi, %eax // r += b
+	compl %edx, %edi
+	jl case2        // loop if i < a
+	goto end
+
+.case1
+	addl %edi, %eax // r += a
+	compl %edx, %esi
+	jl case1        // loop if i < b
+
+.end
+	ret

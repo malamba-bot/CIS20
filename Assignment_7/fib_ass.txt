@@ -1,0 +1,17 @@
+movl $0, %eax	// l = 0
+movl $1, %esi   // f = 0
+movl $0, %edx   // i = 0
+decl %edi   // n -= 1
+.for_verification
+	compl %edx, %edi
+	jl loop         // enter/continue loop if i < n
+ret                 // return l if no longer looping
+
+.loop
+	movl %esi, %ecx // t = f
+	movl %eax, %esi // f += l
+	movl %ecx, %eax // l = t
+	incl %edx       // i++
+	jmp for_verification
+
+
